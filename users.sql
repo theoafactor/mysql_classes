@@ -42,3 +42,12 @@ VALUES("60", 2, NOW());
 
 INSERT INTO `results` (`score`, `student_id`,`date_created`) 
 VALUES("40", 1, NOW());
+
+
+
+/**
+Join Tables
+**/
+SELECT * FROM `students` LEFT JOIN `results` ON `students`.id = `results`.student_id;
+
+SELECT `students`.id AS student_id, `fname`, `email`, `results`.id AS result_id, `score` FROM `students` LEFT JOIN `results` ON `students`.id = `results`.student_id;
