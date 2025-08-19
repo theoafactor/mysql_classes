@@ -20,6 +20,7 @@ while read line;
 
             sudo useradd $username 
 
+            echo "$username:$password" | sudo chpasswd
 
         fi  
 done < $datafile
